@@ -1,4 +1,3 @@
-// RoleController.java
 package com.MelDaColmea.controller;
 
 import com.MelDaColmea.model.RoleModel;
@@ -18,9 +17,7 @@ public class RoleController {
     @GetMapping
     public List<RoleModel> getAllRoles() {
         return roleService.findAllRoles();
-
     }
-
     @GetMapping("/{id}")
     public RoleModel getRoleById(@PathVariable Long id) {
         return roleService.findRoleById(id);
@@ -38,7 +35,7 @@ public class RoleController {
             existingRole.setRoleName(role.getRoleName());
             return roleService.saveRole(existingRole);
         } else {
-            return null; // Manejar el caso de un Role no encontrado
+            return null;
         }
     }
 

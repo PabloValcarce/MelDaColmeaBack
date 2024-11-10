@@ -10,13 +10,14 @@ public class RoleModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
+    private String roleName;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -28,7 +29,7 @@ public class RoleModel {
         this.roleName = roleName;
     }
 
-    private String roleName;
+
 
     // constructors, getters, setters, etc.
 
